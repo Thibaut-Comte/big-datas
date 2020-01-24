@@ -12,3 +12,7 @@ EXPOSE 5000
 RUN /bin/bash -c "source big-datas/bin/activate"
 RUN pip3 install -r requirements.txt
 CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--port=5000", "--allow-root"]
+
+## docker build -t ubuntu-python .
+
+# docker run -it -p 8080:5000 --mount source=volume,destination=./data ubuntu-python
